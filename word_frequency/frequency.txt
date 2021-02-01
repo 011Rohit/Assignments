@@ -1,0 +1,27 @@
+#include<iostream>
+#include<bits/stdc++.h>
+ using namespace std;
+
+ int main(){
+   // filestream variable file
+    fstream file;
+    string word, t, q, filename;
+    map<string,int> mymap;
+
+    filename = "demo.txt";
+
+    // opening file
+    file.open(filename.c_str());
+
+    while (file >> word)
+    {
+        
+        mymap[word]++;
+        
+    }
+
+    for(auto itr : mymap)
+        cout<<itr.first<<" "<<itr.second<<endl;
+
+    return 0;
+}
